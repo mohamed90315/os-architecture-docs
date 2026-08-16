@@ -17,6 +17,38 @@ It acts as the architectural blueprint for the functional code deployed in the s
 
 ---
 
+## 🚀 OS Lab Project: Course Tracker
+
+As part of the final Operating Systems Lab evaluation, this repository includes an automated Bash script (`course_tracker.sh`) designed to dynamically parse PDF transcripts and compare them against academic course plans. 
+
+### How it Works
+The script utilizes `pdftotext` to extract raw string data from PDF files. It employs advanced regular expressions (`awk`/`grep`) to intelligently identify alphanumeric course codes (e.g., `CS322`) and isolate academic grades, cross-referencing them against the departmental curriculum to generate a final `course_report.txt`.
+
+### Usage Instructions
+
+**1. Install Dependencies**
+Ensure you have `poppler-utils` installed to handle PDF parsing:
+```bash
+# On Ubuntu / WSL
+sudo apt-get install poppler-utils
+# On macOS
+brew install poppler
+```
+
+**2. Run the Script**
+Execute the shell script and follow the interactive prompts:
+```bash
+chmod +x course_tracker.sh
+./course_tracker.sh
+```
+
+**3. Provide Paths**
+When prompted, provide the paths to the PDF files located in this repository:
+* *Transcript:* `docs/StudentTranscript.pdf`
+* *Course Plan:* `assets/Course Plan/CY June 2024.pdf`
+
+---
+
 ## 🏗️ Architectural & Academic Modules
 
 The documentation is professionally segmented into specialized modules, reflecting the multi-disciplinary approach required for modern system architecture:
